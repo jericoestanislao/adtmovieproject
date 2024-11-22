@@ -1,0 +1,58 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.h3-register {
+  color: rgb(196, 196, 196);
+  font-size: 1.5rem;
+}
+
+.form-container {
+  padding: 4rem 2rem;
+  outline: 1px solid rgb(196, 196, 196);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(19, 18, 18, 0.7);
+}
+
+.form-container>div {
+  margin-bottom: 12px;
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  width: 170px;
+  margin-right: 8px;
+  text-align: left;
+}
+
+.errors {
+  color: red;
+  font-size: 12px;
+}
+
+.submit-container {
+  color: rgb(122, 122, 122);
+  margin-top: 12px;
+  text-align: center;
+}
+
+.register-container {
+  text-align: center;
+}
+
+.show-password {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}

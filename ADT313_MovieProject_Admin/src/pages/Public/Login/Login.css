@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(../../../../public/Background.png);
+  background-size: cover;
+}
+
+.cineverse-title {
+  font-family: 'Bebas Neue', sans-serif; 
+  font-size: 6rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #dd3b43, #81040a); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  text-transform: uppercase; 
+  letter-spacing: 0.1rem; 
+  text-align: center; 
+}
+
+.h3-login {
+  color: rgb(196, 196, 196);
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.form-container {
+  padding: 4rem 2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-container > div {
+  margin-bottom: 12 px;
+}
+
+label, .show-password {
+  color: rgb(196, 196, 196); 
+}
+
+.form-group {
+  display: flex;
+}
+
+.form-group label {
+  width: 70px;
+  margin-right: 8px;
+  text-align: left;
+}
+.login.errors {
+  margin-bottom: 1rem;
+}
+
+.errors {
+  color: red;
+  font-size: 12px;
+}
+.submit-container {
+  margin-top: 12px;
+  text-align: center;
+}
+.register-container {
+  text-align: center;
+}
+.show-password {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+input[type="text"], input[type="password"] {
+  background-color: rgba(0, 0, 0, 0.7);  
+  color: rgb(255, 255, 255);  
+  border: 1px solid rgb(169, 169, 169);  
+  padding: 4px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
