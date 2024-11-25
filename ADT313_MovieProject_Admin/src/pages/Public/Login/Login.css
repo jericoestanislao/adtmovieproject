@@ -13,7 +13,7 @@
 .cineverse-title {
   font-family: 'Bebas Neue', sans-serif; 
   font-size: 6rem;
-  margin-bottom: 20px;
+  margin-bottom: -15px;
   background: linear-gradient(90deg, #dd3b43, #81040a); 
   -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent; 
@@ -23,7 +23,7 @@
 }
 
 .h3-login {
-  color: rgb(196, 196, 196);
+  color: white;
   font-size: 1.5rem;
   margin-bottom: 16px;
 }
@@ -62,16 +62,46 @@ label, .show-password {
   color: red;
   font-size: 12px;
 }
-.submit-container {
-  margin-top: 12px;
-  text-align: center;
+
+.submit-container button {
+  background-color: #d12020; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  padding: 10px 20px;
+  font-size: 16px; 
+  font-weight: bold; 
+  cursor: pointer; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: all 0.3s ease; 
 }
-.register-container {
-  text-align: center;
+
+.submit-container button:hover {
+  background-color: #910404; 
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px); 
 }
-.show-password {
-  margin-bottom: 1rem;
-  cursor: pointer;
+
+.submit-container button:disabled {
+  background-color: #cccccc; 
+  color: #666666; 
+  cursor: not-allowed; 
+  box-shadow: none;
+}
+
+.register-text {
+  color: lightgray;
+  font-size: 14px; /* Optional: Adjust size if needed */
+}
+
+.register-text a {
+  color: #ffffff; 
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
 }
 
 input[type="text"], input[type="password"] {
@@ -81,4 +111,11 @@ input[type="text"], input[type="password"] {
   padding: 4px;
   font-size: 1rem;
   border-radius: 5px;
+}
+
+.error-message {
+  color: red; 
+  font-size: 14px; 
+  margin-top: 10px; 
+  text-align: center; 
 }

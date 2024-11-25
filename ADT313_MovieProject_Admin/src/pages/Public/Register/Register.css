@@ -56,3 +56,14 @@
   margin-bottom: 1rem;
   cursor: pointer;
 }
+
+.register-container a {
+  color: #ffffff; 
+  font-weight: bold; 
+  text-decoration: none; 
+}
+
+.register-container a:hover {
+  text-decoration: underline; 
+}
+

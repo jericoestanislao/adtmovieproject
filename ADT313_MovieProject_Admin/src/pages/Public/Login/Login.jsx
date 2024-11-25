@@ -14,6 +14,7 @@ function Login() {
   const userInputDebounce = useDebounce({ email, password }, 2000);
   const [debounceState, setDebounceState] = useState(false);
   const [status, setStatus] = useState('idle');
+  const [errorMessage, setErrorMessage] = useState(''); // State for error messages
 
   const navigate = useNavigate();
 
@@ -42,6 +43,8 @@ function Login() {
   const handleLogin = async () => {
     const data = { email, password };
     setStatus('loading');
+    setErrorMessage(''); // Clear error message before login attempt
+
     console.log(data);
 
     await axios({
@@ -57,9 +60,9 @@ function Login() {
         setStatus('idle');
       })
       .catch((e) => {
-        console.log(e);
+        console.error(e);
+        setErrorMessage('Incorrect email or password. Please try again.'); 
         setStatus('idle');
-        // alert(e.response.data.message);
       });
   };
 
@@ -108,6 +111,9 @@ function Login() {
               {isShowPassword ? 'Hide' : 'Show'} Password
             </div>
 
+            {/* Display Error Message */}
+            {errorMessage && <div className='error-message'>{errorMessage}</div>}
+
             <div className='submit-container'>
               <button
                 type='button'
@@ -137,9 +143,9 @@ function Login() {
               </button>
             </div>
             <div className='register-container'>
-              <a href='/register'>
-                <small>Register</small>
-              </a>
+              <p className='register-text'>
+                New to CineVerse? <a href='/register'>Register</a>
+              </p>
             </div>
           </div>
         </form>

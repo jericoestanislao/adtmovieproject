@@ -251,7 +251,7 @@ function Register() {
             </div>
             <div className='register-container'>
               <span>
-                <small style={{ color: 'rgb(196, 196, 196)' }}>
+                <small style={{ color: 'lightgray' }}>
                   Already have an account? <a href='/'>Login</a>
                 </small>
               </span>
