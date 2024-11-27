@@ -5,10 +5,10 @@ import './index.css';
 import Login from './pages/Public/Login/Login';
 import Dashboard from './pages/Main/Dashboard/Dashboard';
 import Main from './pages/Main/Main';
-import Register from './pages/Public/Register/Register';
 import Movie from './pages/Main/Movie/Movie';
 import Lists from './pages/Main/Movie/List/List';
 import Form from './pages/Main/Movie/Form/Form';
+import Register from './pages/Public/Register/Register';
 
 const router = createBrowserRouter([
   {
@@ -17,7 +17,15 @@ const router = createBrowserRouter([
   },
   {
     path: '/register',
-    element: <Register />,
+    element: <Register />
+  },
+  {
+    path: 'admin/login',
+    element: <Login />
+  },
+  {
+    path: 'admin/register',
+    element: <Register />
   },
   {
     path: '/main',
@@ -25,7 +33,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/main/dashboard',
-        element: <Dashboard />
+        element: <Dashboard />,
       },
       {
         path: '/main/movies',
@@ -34,17 +42,13 @@ const router = createBrowserRouter([
           {
             path: '/main/movies',
             element: <Lists />,
-          },{
+          },
+          {
             path: '/main/movies/form/:movieId?',
             element: <Form />,
           },
-        ]
+        ],
       },
-     // {
-     //   path: '/main/dashboard',
-     //   element: <Dashboard />,
-     // },
-
     ],
   },
 ]);

@@ -53,7 +53,7 @@ const Lists = () => {
             navigate('/main/movies/form');
           }}
         >
-          Create new
+          Create New
         </button>
       </div>
       <div className='table-container'>

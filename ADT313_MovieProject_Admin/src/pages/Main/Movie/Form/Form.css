@@ -1,13 +1,15 @@
 /* General Container Styles */
 .moviecontainer {
-  margin-top: 5rem;
+  margin-top: -2rem;
   max-height: 80vh;
   overflow-x: hidden;
   overflow-y: scroll;
   scrollbar-width: none; 
   -ms-overflow-style: none; 
-  background-color: rgb(68, 68, 68);
+  background-color: #141414;
   padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #92070e;
 }
 
 /* Hide scrollbar for WebKit browsers */
@@ -106,9 +108,10 @@
 .movie-details {
   max-width: 600px;
   gap: 10px;
-  background-color: rgb(68, 68, 68);
+  background-color: rgb(29, 29, 29);
   padding: 20px;
   border-radius: 8px;
+  border: 2px solid #92070e;
 }
 
 /* Form Fields */
