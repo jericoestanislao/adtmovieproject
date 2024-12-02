@@ -1,0 +1,95 @@
+.Main .container .navigation .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  color: #fff;
+  border-bottom: 2px solid #333;
+  margin-bottom: 20px;
+}
+
+.Main .container .navigation .profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  background-color: #7c7c7c;
+}
+
+.Main .container .navigation .profile .name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.Main {
+  display: flex;
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.Main .container {
+  display: flex;
+  width: 100vw;
+}
+
+.Main .container .outlet {
+  flex-grow: 3;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.Main .container .navigation {
+  background-color: #141414; 
+  padding-top: 10px;
+  height: 100vh;
+  width: 150px; 
+  color: #fff;
+}
+
+.Main .container .navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Main .container .navigation ul li {
+  padding: 15px 20px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #b3b3b3; 
+  transition: background 0.3s, color 0.3s;
+}
+
+.Main .container .navigation ul li.active,
+.Main .container .navigation ul li:hover {
+  background: #be1e1e;
+  color: #fff;
+}
+
+.Main .container .navigation ul li a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.Main .container .navigation ul li i {
+  font-size: 1.2rem; 
+}
+
+.Main .container .navigation ul li.logout {
+  margin-top: auto; 
+  padding: 15px 20px;
+  color: #beb4b4;
+  text-align: center;
+}
+
+.Main .container .navigation ul li.logout:hover {
+  background-color: #be1e1e;
+  color: #fff;
+}

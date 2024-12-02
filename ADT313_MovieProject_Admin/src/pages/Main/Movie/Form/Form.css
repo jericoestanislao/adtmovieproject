@@ -1,0 +1,243 @@
+/* General Container Styles */
+.moviecontainer {
+  margin-top: -2rem;
+  max-height: 80vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+  background-color: #141414;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #92070e;
+}
+
+/* Hide scrollbar for WebKit browsers */
+.moviecontainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* Search Movie */
+.search-container input {
+  margin-right: 10px;
+  width: 100%; 
+  max-width: 500px; 
+}
+
+.search-container button {
+  width: 120px;
+  background-color: #d12020; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-container button:hover {
+  background-color: #910404; 
+  transform: scale(1.05);
+}
+
+/* Searched Movies */
+.searched-movie {
+  max-height: 200px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin-top: 10px;
+}
+
+.searched-movie::-webkit-scrollbar {
+  display: none;
+}
+
+.searched-movie p {
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.searched-movie p:hover {
+  background-color: #ad5353; 
+  color: rgb(65, 36, 36);
+}
+
+/* Pagination Controls */
+.pagination-container {
+  margin: 1rem;
+  text-align: center;
+}
+
+.pagination-container button {
+  width: 100px;
+  padding: 8px 16px;
+  background-color: #d12020; 
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination-container button:hover {
+  background-color: #910404; 
+  transform: scale(1.05);
+}
+
+.pagination-container span {
+  margin: 0 15px;
+}
+
+/* Movie Display Section */
+.poster-image {
+  max-width: 50%;
+  max-height: 50%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.poster-col {
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Movie Details Section */
+.movie-details {
+  max-width: 520px;
+  gap: 10px;
+  background-color: rgb(29, 29, 29);
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #92070e;
+}
+
+/* Form Fields */
+.movieform-group input,
+.movieform-group textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 5px;
+}
+
+.movieform-group button {
+  margin-top: 20px;
+}
+
+/* Save Button */
+.save-button {
+  margin-top: 20px;
+  width: 100px;
+  background-color: #d12020; 
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.save-button:hover {
+  background-color: #910404;
+  color: #ffffff;
+}
+
+/* Shared Button Styles */
+.moviebtn {
+  cursor: pointer;
+}
+
+.movieform-container {
+  max-height: 80vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+/* Searched Movies */
+.search-input {
+  width: 100%;
+  max-width: 500px; 
+}
+
+.search-button {
+  width: 120px;
+}
+
+/* Not Found Message */
+.not-found-message {
+  opacity: 0.6;
+  background-color: #f56767; 
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+/* Pagination Controls */
+.prev-button, .next-button {
+  width: 100px;
+  padding: 8px 16px;
+  background-color: #d12020; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background-color: #910404; 
+  transform: scale(1.05);
+}
+
+.movie-item {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+.movie-item:hover {
+  background-color: #910404; 
+  color: white;
+}
+
+/* Form Group Styles */
+.movieform-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Full-width Save Button */
+.moviebtn-success {
+  width: 100%;
+  background-color: #d12020; 
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.moviebtn-success:hover {
+  background-color: #910404; 
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-container input,
+  .search-container button {
+    width: 100%; 
+  }
+
+  .poster-col {
+    max-width: 100%; 
+  }
+
+  .movie-details {
+    max-width: 100%; 
+  }
+}

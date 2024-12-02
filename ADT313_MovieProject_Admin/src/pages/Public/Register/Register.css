@@ -1,0 +1,82 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.h3-register {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.form-container {
+  padding: 4rem 2rem;
+  outline: 1px solid rgb(219, 10, 10);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(19, 18, 18, 0.7);
+}
+
+.show-password {
+  position: absolute;
+  right: 485px;
+  top: 66%;
+  transform: translateY(70%);
+  cursor: pointer;
+}
+
+.show-password img {
+  width: 20px;
+  height: 20px;
+}
+
+.form-container>div {
+  margin-bottom: 12px;
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  width: 190px;
+  margin-right: 8px;
+  text-align: left;
+}
+
+.errors {
+  color: red;
+  font-size: 12px;
+}
+
+.submit-container {
+  color: rgb(122, 122, 122);
+  margin-top: 12px;
+  text-align: center;
+}
+
+.register-container {
+  text-align: center;
+}
+
+.show-password {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.register-container a {
+  color: #ffffff; 
+  font-weight: bold; 
+  text-decoration: none; 
+}
+
+.register-container a:hover {
+  text-decoration: underline; 
+}
+
