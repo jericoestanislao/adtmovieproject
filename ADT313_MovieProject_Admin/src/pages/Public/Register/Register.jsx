@@ -8,7 +8,7 @@ function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [firstName, setFirstName] = useState('');
-  const [middleName, setMiddleName] = useState(''); 
+  const [middleName, setMiddleName] = useState('');
   const [lastName, setLastName] = useState('');
   const [contactNo, setContactNo] = useState('');
   const [role, setRole] = useState('');
@@ -16,7 +16,7 @@ function Register() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const firstNameRef = useRef();
-  const middleNameRef = useRef(); 
+  const middleNameRef = useRef();
   const lastNameRef = useRef();
   const contactNoRef = useRef();
   const roleRef = useRef();
@@ -51,7 +51,7 @@ function Register() {
         setFirstName(event.target.value);
         break;
 
-      case 'middleName': 
+      case 'middleName':
         setMiddleName(event.target.value);
         break;
 
@@ -73,7 +73,7 @@ function Register() {
   };
 
   const handleRegister = async () => {
-    const data = { email, password, firstName, middleName, lastName, contactNo, role }; 
+    const data = { email, password, firstName, middleName, lastName, contactNo, role };
     setStatus('loading');
     console.log(data);
 
@@ -96,22 +96,28 @@ function Register() {
       });
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleRegister();
+    }
+  };
+
   useEffect(() => {
     setDebounceState(true);
   }, [userInputDebounce]);
 
   return (
-    <div className='Register'>
-      <div className='main-container'>
-        <h3 className='h3-register'>Register</h3>
+    <div className="Register">
+      <div className="main-container">
+        <h3 className="h3-register">Register</h3>
         <form>
-          <div className='form-container'>
+          <div className="form-container">
             <div>
-              <div className='form-group'>
+              <div className="form-group">
                 <label style={{ color: 'rgb(196, 196, 196)' }}>First Name:</label>
                 <input
-                  type='text'
-                  name='firstName'
+                  type="text"
+                  name="firstName"
                   ref={firstNameRef}
                   style={{
                     backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -121,16 +127,17 @@ function Register() {
                     outline: '1px solid rgb(196, 196, 196)',
                   }}
                   onChange={(e) => handleOnChange(e, 'firstName')}
+                  onKeyDown={handleKeyPress}
                 />
               </div>
             </div>
             <div>
-              <div className='form-group'>
+              <div className="form-group">
                 <label style={{ color: 'rgb(196, 196, 196)' }}>Middle Name:</label>
                 <input
-                  type='text'
-                  name='middleName'
-                  ref={middleNameRef} 
+                  type="text"
+                  name="middleName"
+                  ref={middleNameRef}
                   style={{
                     backgroundColor: 'rgba(0, 0, 0, 0.5)',
                     color: '#fff',
@@ -138,16 +145,17 @@ function Register() {
                     borderRadius: '4px',
                     outline: '1px solid rgb(196, 196, 196)',
                   }}
-                  onChange={(e) => handleOnChange(e, 'middleName')} 
+                  onChange={(e) => handleOnChange(e, 'middleName')}
+                  onKeyDown={handleKeyPress}
                 />
               </div>
             </div>
             <div>
-              <div className='form-group'>
+              <div className="form-group">
                 <label style={{ color: 'rgb(196, 196, 196)' }}>Last Name:</label>
                 <input
-                  type='text'
-                  name='lastName'
+                  type="text"
+                  name="lastName"
                   ref={lastNameRef}
                   style={{
                     backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -157,15 +165,16 @@ function Register() {
                     outline: '1px solid rgb(196, 196, 196)',
                   }}
                   onChange={(e) => handleOnChange(e, 'lastName')}
+                  onKeyDown={handleKeyPress}
                 />
               </div>
             </div>
             <div>
-              <div className='form-group'>
+              <div className="form-group">
                 <label style={{ color: 'rgb(196, 196, 196)' }}>Contact Number:</label>
                 <input
-                  type='text'
-                  name='contactNo'
+                  type="text"
+                  name="contactNo"
                   ref={contactNoRef}
                   style={{
                     backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -175,15 +184,16 @@ function Register() {
                     outline: '1px solid rgb(196, 196, 196)',
                   }}
                   onChange={(e) => handleOnChange(e, 'contactNo')}
+                  onKeyDown={handleKeyPress}
                 />
               </div>
             </div>
             <div>
-              <div className='form-group'>
+              <div className="form-group">
                 <label style={{ color: 'rgb(196, 196, 196)' }}>Role:</label>
                 <input
-                  type='text'
-                  name='role'
+                  type="text"
+                  name="role"
                   ref={roleRef}
                   style={{
                     backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -193,15 +203,16 @@ function Register() {
                     outline: '1px solid rgb(196, 196, 196)',
                   }}
                   onChange={(e) => handleOnChange(e, 'role')}
+                  onKeyDown={handleKeyPress}
                 />
               </div>
             </div>
             <div>
-              <div className='form-group'>
-                <label style={{ color: 'rgb(196, 196, 196)' }}>Email:</label>
+              <div className="form-group">
+                <label style={{ color: 'rgb(196, 196, 196)' }}>E-mail:</label>
                 <input
-                  type='text'
-                  name='email'
+                  type="text"
+                  name="email"
                   ref={emailRef}
                   style={{
                     backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -211,15 +222,16 @@ function Register() {
                     outline: '1px solid rgb(196, 196, 196)',
                   }}
                   onChange={(e) => handleOnChange(e, 'email')}
+                  onKeyDown={handleKeyPress}
                 />
               </div>
             </div>
             <div>
-              <div className='form-group'>
+              <div className="form-group">
                 <label style={{ color: 'rgb(196, 196, 196)' }}>Password:</label>
                 <input
                   type={isShowPassword ? 'text' : 'password'}
-                  name='password'
+                  name="password"
                   ref={passwordRef}
                   style={{
                     backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -229,30 +241,34 @@ function Register() {
                     outline: '1px solid rgb(196, 196, 196)',
                   }}
                   onChange={(e) => handleOnChange(e, 'password')}
+                  onKeyDown={handleKeyPress}
                 />
               </div>
             </div>
             <div
-              className='show-password'
+              className="show-password"
               onClick={handleShowPassword}
-              style={{ color: 'rgb(196, 196, 196)', cursor: 'pointer' }}
+              style={{ cursor: 'pointer', display: 'inline-block' }}
             >
-              {isShowPassword ? 'Hide' : 'Show'} Password
+              <img
+                src={isShowPassword ? '/hide-pass.png' : '/show-pass.png'}
+                alt={isShowPassword ? 'Hide Password' : 'Show Password'}
+              />
             </div>
 
-            <div className='submit-container'>
+            <div className="submit-container">
               <button
-                type='button'
+                type="button"
                 disabled={status === 'loading'}
                 onClick={handleRegister}
               >
                 {status === 'idle' ? 'Register' : 'Loading'}
               </button>
             </div>
-            <div className='register-container'>
+            <div className="register-container">
               <span>
                 <small style={{ color: 'lightgray' }}>
-                  Already have an account? <a href='/'>Login</a>
+                  Already have an account? <a href="/">Login</a>
                 </small>
               </span>
             </div>

@@ -7,7 +7,7 @@
 }
 
 .h3-register {
-  color: rgb(196, 196, 196);
+  color: white;
   font-size: 1.5rem;
 }
 
@@ -22,6 +22,19 @@
   background-color: rgba(19, 18, 18, 0.7);
 }
 
+.show-password {
+  position: absolute;
+  right: 485px;
+  top: 66%;
+  transform: translateY(70%);
+  cursor: pointer;
+}
+
+.show-password img {
+  width: 20px;
+  height: 20px;
+}
+
 .form-container>div {
   margin-bottom: 12px;
 }
@@ -32,7 +45,7 @@
 }
 
 .form-group label {
-  width: 170px;
+  width: 190px;
   margin-right: 8px;
   text-align: left;
 }

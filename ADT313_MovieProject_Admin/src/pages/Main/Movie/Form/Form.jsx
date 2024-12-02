@@ -1,9 +1,11 @@
 import axios from 'axios';
-import { useCallback, useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useCallback, useContext, useEffect, useState } from 'react';
+import { Outlet, useNavigate, useParams } from 'react-router-dom';
+import { AuthContext } from '../../../../Context/Context';
 import './Form.css';
 
 const Form = () => {
+    const { auth } = useContext(AuthContext);
     const [query, setQuery] = useState('');
     const [searchedMovieList, setSearchedMovieList] = useState([]);
     const [selectedMovie, setSelectedMovie] = useState(undefined);
@@ -25,7 +27,7 @@ const Form = () => {
                 url: `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=${page}`,
                 headers: {
                     Accept: 'application/json',
-                    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmZjcwNmYyZDQwMDA0ZTUwYzhmOGUwZDg4MWNjMzMzMCIsIm5iZiI6MTczMTU5ODg1NC42MjI1ODgyLCJzdWIiOiI2NzEzMzc3MjY1MDI0OGI5ZGI2MWQ3MzgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.Z5quNuFFNmtUb_Vmo7pduOIfBzu0JKfpvmmHcJJ08ps',
+                    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2ZGI0NmNiN2UyMGU0NDBkNWVkZDE0YWE5NDRmZDJlZCIsIm5iZiI6MTczMjgwNzAzNy4xMTg0ODIsInN1YiI6IjY3NDg4Nzg0YTY1MTQ1ZjU1OGRiMDFhMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.NwHGDmGok2lDyb6mRVQa2XxEp1jX77lKUvUIoMtelEo',
                 },
             });
 
@@ -76,7 +78,7 @@ const Form = () => {
                     url: `/movies/${movieId}`,
                     data: data,
                     headers: {
-                        Authorization: `Bearer ${accessToken}`,
+                        Authorization: `Bearer ${auth.accessToken}`,
                     },
                 });
                 alert('Update Success');
@@ -86,7 +88,7 @@ const Form = () => {
                     url: '/movies',
                     data: data,
                     headers: {
-                        Authorization: `Bearer ${accessToken}`,
+                        Authorization: `Bearer ${auth.accessToken}`,
                     },
                 });
                 alert('Save Success');
@@ -292,9 +294,24 @@ const Form = () => {
                 </div>
             </form>
         </div>
+        <div className="additional-info-container">
+        {movieId !== undefined && selectedMovie && (
+            <>
+                <nav>
+                    <ul className="tabs">
+                        <li onClick={() => navigate(`/main/movies/form/${movieId}/cast`)}>Cast & Crews</li>
+                        <li onClick={() => navigate(`/main/movies/form/${movieId}/videos`)}>Videos</li>
+                        <li onClick={() => navigate(`/main/movies/form/${movieId}/photos`)}>Photos</li>
+                    </ul>
+                </nav>
+                <div className="tabs-content">
+                    <Outlet />
+                </div>
+            </>
+        )}
+    </div>
     </div>
 </div>
-
 
     );
 };
