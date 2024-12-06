@@ -1,74 +1,62 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+.movie-page {
     background: linear-gradient(180deg, #141414, #3b3b3b); 
     color: white; 
     min-height: 100vh;
   }
   
-  h1 {
+  .movie-page h1 {
     background: linear-gradient(to right, #a01a1a, #4A2529);
     -webkit-background-clip: text; 
     color: transparent; 
-    
-    /* Font Design */
     font-family: 'Bebas Neue', sans-serif; 
     font-size: 3rem; 
     font-weight: bold; 
     text-align: corner; 
     letter-spacing: 2px; 
     text-transform: uppercase; 
-    
-    /* Spacing and Alignment */
-    margin: 20px 0; 
-    padding: 10px; 
+    margin: 5px 0; 
+    padding: 20px; 
     border-bottom: 3px solid #92070e; 
   }
   
-  
-  .lists-container {
-    width: 80%;
-    margin: 0 auto;
-    background-color: #141414; 
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
-    min-height: 100vh;
-    border: 2px solid #92070e;
-  }
-  
-  .table-container {
+  .movie-page .table-container {
     overflow-x: auto; 
+    position: relative;
+    top: 20px;
   }
   
-  .movie-lists {
-    width: 100%;
+  .movie-page .movie-lists {
+    width: 95%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 0 auto;
+    border: 3px solid red; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px red;
   }
   
-  .movie-lists th {
+  .movie-page .movie-lists th {
     background-color: #92070e; 
     color: white;
     padding: 10px;
-    text-align: left;
+    text-align: center;
   }
   
-  .movie-lists td {
+  .movie-page .movie-lists td {
     padding: 10px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #3b3b3b;
   }
   
-  .movie-lists tr:nth-child(even) {
+  .movie-page .movie-lists tr:nth-child(even) {
     background-color: #242424; 
   }
   
-  .movie-lists tr:hover {
+  .movie-page .movie-lists tr:hover {
     background-color: #333; 
   }
   
-  .button-list {
+  .movie-page .button-list {
     margin: 0 5px;
     padding: 5px 10px;
     border: none;
@@ -79,28 +67,25 @@ body {
     transition: background-color 0.3s ease;
   }
   
-  .button-list:hover {
+  .movie-page .button-list:hover {
     background-color: #910404; 
   }
   
-  .create-container {
+  .movie-page .create-container {
     text-align: right;
     margin-bottom: 20px;
   }
   
-  .create-container .button-list {
+  .movie-page .create-container .button-list {
     font-size: 16px;
     padding: 8px 15px;
     background-color: #d12020;
     border-radius: 8px;
     font-weight: bold;
   }
-
-  .create-container .button-list:hover {
+  
+  .movie-page .create-container .button-list:hover {
     background-color: #910404; 
     color: #f1f1f1; 
   }
-
-
-  
   
