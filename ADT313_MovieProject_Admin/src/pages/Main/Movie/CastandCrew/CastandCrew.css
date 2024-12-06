@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: rgb(30, 30, 30);
+  color: white;
+  line-height: 1.6;
+}
+
+.header {
+  background-color: rgb(45, 45, 45);
+  padding: 15px;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cast-box {
+  background: linear-gradient(to bottom, black, rgb(99, 9, 9));
+  border-radius: 10px;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
+  justify-items: center; 
+  position: relative;
+  bottom: 1000px;
+}
+
+.Cast-View-Box,
+.Search-Box {
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1;
+  min-width: 500px;
+}
+
+.Cast-View-Box {
+  background: linear-gradient(to top, black, rgb(99, 9, 9));
+  display: flex;
+  width: 100%; 
+  min-width: 100px; 
+  max-width: 340px; 
+  margin: 0 auto; 
+  flex-shrink: 0; 
+  box-sizing: border-box; 
+}
+
+.card-display-cast {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.card {
+  background: linear-gradient(to bottom, rgb(66, 66, 66), rgb(99, 9, 9));
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  overflow: hidden;
+  width: 300px; 
+  height: 250px; 
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.image-casts {
+  width: 100%;
+  height: 150px; 
+  object-fit: cover;
+  border-radius: 50%; 
+  transition: transform 0.3s ease;
+}
+
+.card:hover .image-casts {
+  transform: scale(1.1); 
+}
+
+.card-text {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 10px;
+  font-size: 1.2rem;
+  color: red; 
+  text-align: center; 
+  font-family: 'Arial', sans-serif;
+}
+
+.card-text .name {
+  font-weight: bold;
+  font-size: 1.5rem; 
+  margin-bottom: 5px; 
+  text-transform: uppercase; 
+}
+
+.card-text .role {
+  font-size: 1rem;
+  color: #bbb;
+}
+
+.search-box-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.input-search-person {
+  flex: 2;
+  padding: 12px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  position: relative;
+  top: 20px;
+  left: 5px;
+}
+
+.button-search,
+.save-button,
+.edit-btn,
+.back-btn {
+  padding: 10px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative; 
+  top: 20px;
+  right: 5px;
+}
+
+.button-search {
+  background-color: red;
+}
+
+.save-button {
+  background-color: red;
+}
+
+.edit-btn {
+  background-color: red;
+}
+
+.back-btn {
+  background-color: hsl(0, 0%, 50%);
+}
+
+.footer {
+  background-color: rgb(45, 45, 45);
+  text-align: center;
+  padding: 10px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.img-cast {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%; 
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  position: relative;
+  left: 220px;
+  top: 5px;
+}
