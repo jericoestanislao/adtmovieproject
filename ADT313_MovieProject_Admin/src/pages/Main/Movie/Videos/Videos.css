@@ -1,0 +1,195 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+.video-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, black, #4d1010);
+  border-radius: 10px;
+  position: relative;
+  bottom: 60px;
+}
+
+.Video-View-Box {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  max-height: 600px;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(255, 0, 0, 0.5);
+}
+
+.card-display-videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.card-video {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #4d1010, black);
+  transition: transform 0.2s;
+}
+
+.card-video:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-style {
+  width: 100%;
+  height: 150px;
+}
+
+.container-video {
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.buttons-group {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.delete-button, .edit-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 4px;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.delete-button {
+  background: #e74c3c;
+}
+
+.edit-button {
+  background: red;
+}
+
+.delete-button:hover {
+  background: #c0392b;
+}
+
+.edit-button:hover {
+  background:red;
+}
+
+.no-videos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 16px;
+  color: #040303;
+  background-color: #676666;
+}
+
+.Video-Search-Box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  box-shadow: 0 4px 20px rgba(255, 0, 0, 0.5);
+}
+
+.video-frame-container iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.label-video {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  font-size: 14px;
+  color: #555;
+}
+
+.video-url, .video-name, .site-name, .video-type-name, .seletor-official {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+.video-url:focus, .video-name:focus, .site-name:focus, .video-type-name:focus, .seletor-official:focus {
+  border-color: red;
+  outline: none;
+}
+
+.save-edit-back-btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.edit-save-btn, .clear-btn, .btn-importer {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-save-btn {
+  background-color: red;
+  color: white;
+}
+
+.clear-btn {
+  background-color: red;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .video-box {
+    flex-direction: column;
+  }
+
+  .Video-View-Box {
+    max-height: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-display-videos {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
