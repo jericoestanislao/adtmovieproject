@@ -1,0 +1,58 @@
+.movie-page {
+    background: linear-gradient(180deg, #141414, #3b3b3b); 
+    color: white; 
+    min-height: 100vh;
+  }
+  
+  .movie-page h1 {
+    background: linear-gradient(to right, #a01a1a, #4A2529);
+    -webkit-background-clip: text; 
+    color: transparent; 
+    font-family: 'Bebas Neue', sans-serif; 
+    font-size: 3rem; 
+    font-weight: bold; 
+    text-align: corner; 
+    letter-spacing: 2px; 
+    text-transform: uppercase; 
+    margin: 5px 0; 
+    padding: 20px; 
+    border-bottom: 3px solid #92070e;
+  }
+  
+  .movie-page .movie-lists tr:hover {
+    background-color: #333; 
+  }
+  
+  .movie-page .button-list {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #d12020; 
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .movie-page .button-list:hover {
+    background-color: #910404; 
+  }
+  
+  .movie-page .create-container {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  
+  .movie-page .create-container .button-list {
+    font-size: 16px;
+    padding: 8px 15px;
+    background-color: #d12020;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  
+  .movie-page .create-container .button-list:hover {
+    background-color: #910404; 
+    color: #f1f1f1; 
+  }
+  

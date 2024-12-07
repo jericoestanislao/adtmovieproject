@@ -1,0 +1,98 @@
+.Main {
+  display: flex;
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.Main .container {
+  display: flex;
+  width: 100vw;
+}
+
+.Main .container .outlet {
+  flex-grow: 3;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.Main .container .navigation {
+  background-color: #141414;
+  padding-top: 20px;
+  height: 100vh;
+  width: 200px; 
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 0.3s ease-in-out;
+}
+
+.Main .container .navigation .profile {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #5c5c5c;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.Main .container .navigation .profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.Main .container .navigation .profile .name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.Main .container .navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Main .container .navigation ul li {
+  padding: 15px 20px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #b3b3b3;
+  transition: background 0.3s, color 0.3s;
+  position: relative;
+  bottom: 350px;
+}
+
+.Main .container .navigation ul li.active,
+.Main .container .navigation ul li:hover {
+  background: #be1e1e;
+  color: #fff;
+}
+
+.Main .container .navigation ul li a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Main .container .navigation ul li i {
+  font-size: 1.2rem;
+}
+
+.Main .container .navigation ul li.logout {
+  margin-top: auto;
+  padding: 15px 20px;
+  color: #beb4b4;
+  text-align: center;
+}
+
+.Main .container .navigation ul li.logout:hover {
+  background-color: #be1e1e;
+  color: #fff;
+}

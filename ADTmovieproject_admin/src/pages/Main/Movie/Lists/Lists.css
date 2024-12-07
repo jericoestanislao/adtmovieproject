@@ -1,0 +1,150 @@
+.lists-page {
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .lists-create-container {
+    margin-bottom: 20px;
+    text-align: right;
+  }
+  
+  .lists-create-container button {
+    background-color: #e50914; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .lists-create-container button:hover {
+    background-color: #b20710;
+    transform: scale(1.05);
+  }
+  
+  .lists-create-container button:focus {
+    outline: none;
+  }
+  
+  .lists-table-container {
+    margin-top: 30px;
+  }
+  
+  .lists-movie-lists {
+    width: 100%;
+    border-collapse: collapse;
+    background: linear-gradient(145deg, #1e1e1e, #141414);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  .lists-movie-lists thead {
+    background-color: #333;
+  }
+  
+  .lists-movie-lists th,
+  .lists-movie-lists td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #8d2525;
+  }
+  
+  .lists-movie-lists th {
+    color: #fff;
+    background-color: rgb(75, 0, 0);
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .lists-movie-lists td {
+    color: #ddd;
+    font-size: 1rem;
+  }
+  
+  .lists-movie-lists tr:hover {
+    background-color: #444;
+  }
+  
+  .lists-movie-lists tr:nth-child(odd) {
+    background-color: #2a2a2a;
+  }
+  
+  .lists-movie-lists td button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .lists-movie-lists td button:hover {
+    background-color: #b20710;
+    transform: scale(1.05);
+  }
+  
+  .lists-movie-lists td button.delete {
+    background-color: #d9534f;
+  }
+  
+  .lists-movie-lists td button.delete:hover {
+    background-color: #c9302c;
+    transform: scale(1.05);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .lists-page {
+      padding: 10px;
+    }
+  
+    .lists-create-container button {
+      width: 100%;
+      padding: 12px;
+      font-size: 1.2rem;
+    }
+  
+    .lists-movie-lists {
+      font-size: 0.9rem;
+    }
+  
+    .lists-movie-lists th,
+    .lists-movie-lists td {
+      padding: 12px;
+    }
+  
+    .lists-movie-lists td button {
+      padding: 8px 14px;
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .lists-movie-lists td button {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      margin: 5px 0;
+    }
+  
+    .lists-movie-lists td {
+      font-size: 0.9rem;
+    }
+  
+    .lists-movie-lists th,
+    .lists-movie-lists td {
+      padding: 10px;
+    }
+  
+    .lists-movie-lists td button.create {
+      padding: 12px 25px;
+    }
+  }
+  
